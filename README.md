@@ -156,7 +156,11 @@ WHERE contact_name = 'Bilbo Baggins';
   </details>
 
 ```SQL
-
+SELECT o.ship_name company_name, c.contact_name customer, count(*) num_of_orders
+FROM orders o
+JOIN customers c
+ON c.customer_id = o.customer_id
+GROUP BY o.ship_name, c.customer_id;
 
 ```
 
@@ -168,7 +172,12 @@ WHERE contact_name = 'Bilbo Baggins';
   </details>
 
 ```SQL
-
+SELECT o.ship_name company_name, c.contact_name customer, count(*) num_of_orders
+FROM orders o
+JOIN customers c
+ON c.customer_id = o.customer_id
+GROUP BY c.contact_name, o.ship_name
+ORDER BY num_of_orders DESC;
 
 ```
 
@@ -180,6 +189,9 @@ WHERE contact_name = 'Bilbo Baggins';
   </details>
 
 ```SQL
+SELECT o.ship_city city, count(*) num_of_orders
+FROM orders o
+GROUP BY o.ship_city;
 
 ```
 
