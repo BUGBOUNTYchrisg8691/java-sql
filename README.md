@@ -157,6 +157,7 @@ WHERE contact_name = 'Bilbo Baggins';
 
 ```SQL
 
+
 ```
 
 * [ ] ***list customers by contact name and the number of orders per contact name. Sort the list by the number of orders in descending order. _Jose Pavarotti_ should be at the top with 31 orders followed by _Roland Mendal_ with 30 orders. Last should be _Francisco Chang_ with 1 order***
@@ -167,6 +168,7 @@ WHERE contact_name = 'Bilbo Baggins';
   </details>
 
 ```SQL
+
 
 ```
 
