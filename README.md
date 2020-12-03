@@ -37,6 +37,9 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
   </details>
 
 ```SQL
+SELECT *
+FROM customers
+WHERE city = 'London';
 
 ```
 
@@ -48,6 +51,9 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
   </details>
 
 ```SQL
+SELECT *
+FROM customers
+WHERE postal_code = '1010';
 
 ```
 
@@ -59,6 +65,9 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
   </details>
 
 ```SQL
+SELECT phone
+FROM suppliers
+WHERE supplier_id = '11';
 
 ```
 
@@ -70,6 +79,9 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
   </details>
 
 ```SQL
+SELECT *
+FROM orders
+ORDER BY order_date DESC;
 
 ```
 
@@ -82,6 +94,9 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
   </details>
 
 ```SQL
+SELECT *
+FROM suppliers
+WHERE LENGTH(company_name) > 20;
 
 ```
 
@@ -95,6 +110,9 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
   </details>
 
 ```SQL
+SELECT *
+FROM customers
+WHERE upper(contact_title) LIKE ('%MARKET%');
 
 ```
 
@@ -112,6 +130,8 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
   </details>
 
 ```SQL
+INSERT INTO customers(customer_id, company_name, contact_name, address, city, postal_code, country)
+VALUES ('SHIRE', 'The Shire', 'Bilbo Baggins', '1 Hobbit-Hole', 'Bag End', '111', 'Middle Earth');
 
 ```
 
@@ -123,10 +143,11 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
   </details>
 
 ```SQL
+UPDATE customers
+SET postal_code = '11122'
+WHERE contact_name = 'Bilbo Baggins';
 
-```
-
-* [ ] ***list orders grouped and ordered by customer company name showing the number of orders per customer company name. _Rattlesnake Canyon Grocery_ should have 18 orders***
+``` * [ ] ***list orders grouped and ordered by customer company name showing the number of orders per customer company name. _Rattlesnake Canyon Grocery_ should have 18 orders***
 
   <details><summary>hint</summary>
 
@@ -135,6 +156,7 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
   </details>
 
 ```SQL
+
 
 ```
 
@@ -146,6 +168,7 @@ Reimport the Northwind database into PostgreSQL using pgAdmin. This is the same 
   </details>
 
 ```SQL
+
 
 ```
 
